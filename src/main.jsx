@@ -14,7 +14,7 @@ createRoot(document.getElementById("root")).render(
       domain={domain}
       clientId={clientId}
       authorizationParams={{
-        redirect_uri: "http://localhost:5173/home",
+        redirect_uri: "https://opne-lab-test-front.vercel.app/home",
         audience: "https://dev-7k3f6bwgzvjfn0og.us.auth0.com/api/v2/",
       }} >
       <AppKitProvider>

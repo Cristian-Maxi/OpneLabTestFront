@@ -38,7 +38,7 @@ const Cliente = () => {
       const token = await getAccessTokenSilently(); // Obtener el token de acceso
 
       // Enviar los datos al backend
-      await axios.post('http://localhost:8080/api/login/signup', token, {
+      await axios.post('https://h3-13-openlab.onrender.com/api/login/signup', token, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -47,7 +47,7 @@ const Cliente = () => {
       console.log('Datos del usuario enviados al backend');
 
       // Obtener los datos del cliente desde el backend
-      const response = await axios.get('http://localhost:8080/api/cliente/email?correo=' + user.email);
+      const response = await axios.get('https://h3-13-openlab.onrender.com/api/cliente/email?correo=' + user.email);
 
       // Guardar los datos en el estado y en localStorage
       setUsuarioData(response.data);  // Guardar los datos del cliente en el estado
@@ -63,7 +63,7 @@ const Cliente = () => {
 
     try {
       // Validar datos en el backend
-      const response = await axios.post('http://localhost:8080/orderbook/validate-buy', {
+      const response = await axios.post('https://h3-13-openlab.onrender.com/orderbook/validate-buy', {
         price: price,
         quantity: quantity,
       });
