@@ -1,5 +1,4 @@
 import React from 'react';
-import icono from "../../../google.png";
 import "../css/Header.css"
 import {Link} from 'react-router-dom';
 
@@ -7,7 +6,7 @@ const Header = () => {
   return (
     <div className='contenedor-header'>
         <div className='icono'>
-         <Link to={"/"}><img src={icono} alt="logo" /></Link>
+         <Link to={"/"}>Logo</Link>
         </div>
         <div className='atajos'>
             <li><Link to={"/"}>Inicio</Link></li>
