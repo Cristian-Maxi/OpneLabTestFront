@@ -37,12 +37,13 @@ const Cliente = () => {
     try {
       const token = await getAccessTokenSilently(); // Obtener el token de acceso
 
-      // Enviar los datos al backend
-      await axios.post('https://h3-13-openlab.onrender.com/api/login/signup', token, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+     // Enviar los datos al backend
+     await axios.post('https://h3-13-openlab.onrender.com/api/login/signup', token, {
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      withCredentials: true // Si necesitas enviar cookies
+    });
 
       console.log('Datos del usuario enviados al backend');
 
